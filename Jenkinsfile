@@ -66,6 +66,15 @@ pipeline{
 
         }*/
 
+        stage('Verify Docker') {
+               steps {
+                   script {
+                       sh 'docker --version'
+                       sh 'docker ps'
+                   }
+               }
+        }
+	    
         stage("Build & Push Docker Image") {
             steps {
                 script {
