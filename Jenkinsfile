@@ -69,7 +69,7 @@ pipeline{
         stage("Build & Push Docker Image") {
             steps {
                 script {
-                    docker.withRegistry('',DOCKER_PASS) {
+                    docker.withRegistry('',DOCKER_PASS) { // since we are using dockerhub which is default , first param is empty
                         docker_image = docker.build "${IMAGE_NAME}"
                     }
 
