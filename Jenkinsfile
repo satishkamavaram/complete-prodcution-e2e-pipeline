@@ -10,8 +10,8 @@ pipeline{
     environment {
         APP_NAME = "complete-prodcution-e2e-pipeline"
         RELEASE = "1.0.0"
-        DOCKER_USER = "dmancloud"
-        DOCKER_PASS = 'dockerhub'
+        DOCKER_USER = "satishkamavaram"
+        DOCKER_PASS = 'dockerhub' // configure dockerhub as credentials with username and password(token from dockerhub)
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
         JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
